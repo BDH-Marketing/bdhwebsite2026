@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>服務/工作坊諮詢</title>
+<meta name="description" content="填寫以下資訊，統域顧問將與您聯繫相關細節。">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body data-hero data-screen-label="工作坊報名">
+
+<!-- ============ HEADER ============ -->
+ 
+<header class="site-header">
+  <div class="bar">
+    <a class="brand" href="index.html" aria-label="統域領導力發展首頁">
+      <img class="logo-dark" src="assets/img/logo-horizontal.png" alt="統域領導力發展 BE DO HAVE LEADERSHIP">
+      <img class="logo-white" src="assets/img/white_horizontal.png" alt="統域領導力發展">
+    </a>
+  
+    <nav class="nav">
+      <a class="navlink" href="index.html">首頁</a>
+      <div class="nav-dropdown">
+        <a class="navlink has-dropdown" href="workshop.html">卓越領導工作坊 <span class="dropdown-arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="workshop.html">完整工作坊介紹</a>
+          <a class="dropdown-item" href="m1.html">M1 覺察探索</a>
+          <a class="dropdown-item" href="register.html">工作坊報名</a>
+        </div>
+      </div>
+      <div class="nav-dropdown">
+        <a class="navlink has-dropdown" href="">全人發展系列 <span class="dropdown-arrow">▾</span></a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="abundance&prosperity.html">豐盛富足工作坊</a>
+          <a class="dropdown-item" href="https://bedo-have.my.salesforce-sites.com/ClassSchedule/apex/SignUp_Landing_Page?Course_Id=a01TL00001irDoUYAU">工作坊報名</a>
+        </div>
+      </div>
+       <a class="navlink" href="register.html">服務及工作坊諮詢</a>
+    </nav>
+    <button class="menu-toggle" aria-label="開啟選單"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav">
+  <div class="m-top">
+    <img src="assets/img/logo-horizontal.png" alt="統域領導力發展">
+    <button class="m-close" data-close aria-label="關閉選單">&times;</button>
+  </div>
+  <nav class="m-links">
+    <a href="index.html">首頁<span class="en">Home</span></a>
+    <div class="m-accordion">
+      <button class="m-accordion-toggle" aria-expanded="false">
+        <span class="m-accordion-label">卓越領導工作坊<span class="en">Beyond Excellence Leadership</span></span>
+        <span class="m-arrow">▾</span>
+      </button>
+      <div class="m-accordion-body">
+        <a href="workshop.html">完整工作坊介紹<span class="en">Full Workshop</span></a>
+        <a href="m1.html">M1 覺察探索<span class="en">Module 1 · Awareness</span></a>
+        <a href="register.html">工作坊報名<span class="en">Register</span></a>
+      </div>
+    </div>
+    <div class="m-accordion">
+      <button class="m-accordion-toggle" aria-expanded="false">
+        <span class="m-accordion-label">全人發展系列<span class="en">Holistic Growth Series</span></span>
+        <span class="m-arrow">▾</span>
+      </button>
+      <div class="m-accordion-body">
+        <a href="abundance&prosperity.html">豐盛富足工作坊<span class="en">Abundance & Prosperity</span></a>
+      </div>
+    </div>
+  </nav>
+  <div class="m-cta"><a class="btn btn-primary" href="register.html">服務及工作坊諮詢<span class="arr">→</span></a></div>
+</div>
+
+
+<!-- SLIM HERO -->
+<section class="reg-hero" data-screen-label="諮詢 Hero">
+  <div class="hero-bg"><img src="assets/img/summit-arms.jpg" alt="於山頂張開雙臂的登山者"></div>
+  <div class="rh-inner">
+    <span class="module-tag">Consultation · Beyond Excellence Leadership</span>
+    <h1>服務/工作坊諮詢</h1>
+    <p>填寫以下資訊，統域顧問將親自與您聯繫，確認梯次與諮詢細節。</p>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="section" style="padding-top:clamp(48px,6vw,80px);" data-screen-label="諮詢表單">
+  <div class="wrap">
+    <div style="max-width:680px;margin:0 auto;">
+
+      <div class="form-success" id="successBox">
+        <div class="fs-mark">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#00438D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+        </div>
+        <h2 style="font-size:28px;">諮詢資訊已送出</h2>
+        <p class="muted" style="max-width:420px;margin:14px auto 24px;">感謝您的諮詢！統域將於 2–3 個工作日內與您聯繫，確認梯次與後續細節。期待與您同行。</p>
+        <a class="btn btn-ghost" href="index.html">返回首頁</a>
+      </div>
+
+      <form id="regForm" novalidate>
+        <span class="eyebrow">諮詢資訊 · Your Details</span>
+        <h2 style="font-size:clamp(24px,2.8vw,32px);margin:16px 0 8px;">您的聯繫資訊</h2>
+        <p class="muted" style="margin-bottom:32px;">標示 <span style="color:var(--blue-500);">*</span> 為必填欄位。</p>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="name">姓名 <span class="req">*</span></label>
+            <input type="text" id="name" name="name" required autocomplete="name" placeholder="您的姓名">
+          </div>
+          <div class="field">
+            <label for="phone">手機電話 <span class="req">*</span></label>
+            <input type="tel" id="phone" name="phone" required autocomplete="tel" placeholder="09xx-xxx-xxx">
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="email">電子信箱 <span class="req">*</span></label>
+          <input type="email" id="email" name="email" required autocomplete="email" placeholder="name@example.com">
+        </div>
+
+        <div class="field">
+          <label for="session">諮詢項目</label>
+          <select id="session" name="session">
+            <option value="">卓越領導工作坊M1</option>
+            <option value="">卓越領導工作坊M2</option>
+            <option value="">卓越領導工作坊M3</option>
+            <option value="">其他工作坊</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="source">如何得知</label>
+          <select id="source" name="source">
+            <option value="">請選擇</option>
+            <option>親友／同事推薦</option>
+            <option>曾參與統域課程</option>
+            <option>社群媒體（FB／IG／LINE）</option>
+            <option>網站搜尋</option>
+            <option>企業內部推薦</option>
+            <option>其他</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="motivation">參加動機 / 想對我們說的話</label>
+          <textarea id="motivation" name="motivation" placeholder="是什麼讓你想參加這次工作坊？（選填）"></textarea>
+        </div>
+
+        <label class="check" style="margin-bottom:28px;">
+          <input type="checkbox" id="agree" required>
+          <span>我已確認上述填寫需求及聯絡資訊無誤，並同意統域與我聯繫確認諮詢事項。<span class="req" style="color:var(--blue-500);">*</span></span>
+        </label>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:17px;">送出報名 <span class="arr">→</span></button>
+        <p class="form-note" id="formError" style="margin-top:14px;color:#b4232a;display:none;">請完整填寫必填欄位，並確認已勾選同意事項。</p>
+      </form>
+
+    </div>
+  </div>
+</section>
+
+<!-- COURSE CARDS / our programmes -->
+<section class="section bg-paper-2" data-screen-label="課程總覽">
+  <div class="wrap">
+    <div class="sec-head reveal" style="margin-bottom:clamp(32px,4vw,52px);">
+      <span class="eyebrow">課程總覽 · Our Programmes</span>
+      <h2>探索適合您的課程</h2>
+    </div>
+    <div class="grid cols-4">
+
+<!-- card1 -->
+
+      <div class="summary" style="position:static;display:flex;flex-direction:column;">
+        <div class="s-img"><img src="assets/img/awareness.png" alt="Module ｜ 覺察探索"></div>
+        <div class="s-body" style="display:flex;flex-direction:column;flex:1;">
+          <span class="mc-stage" style="font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-500);">Module 1 · Awareness</span>
+          <h3 style="font-size:20px;margin:8px 0 10px;">覺察探索工作坊</h3>
+          <p class="muted" style="font-size:14px;margin:0 0 16px;">整套訓練系統的起點與基石，以「覺察」與「探索」為核心，建立清晰的自我覺知能力。</p>
+          <button class="s-toggle" aria-expanded="false"><span class="s-label">顯示更多</span> <span class="s-arrow">▾</span></button>
+          <dl class="s-detail" style="flex:1;">
+            <div class="s-row"><dt>課程模組</dt><dd>Module 1 覺察探索</dd></div>
+            <div class="s-row"><dt>課程長度</dt><dd>5天：3全天＋2晚間</dd></div>
+            <div class="s-row"><dt>形式</dt><dd>實體</dd></div>
+            <div class="s-row"><dt>梯次日期</dt><dd>即將公布</dd></div>
+            <div class="s-row"><dt>課程費用</dt><dd>請洽詢顧問</dd></div>
+          </dl>
+          <a class="btn btn-ghost" href="m1.html" style="margin-top:20px;width:100%;justify-content:center;">查看完整課程 <span class="arr">→</span></a>
+        </div>
+      </div>
+
+<!-- card2 -->
+
+      <div class="summary" style="position:static;display:flex;flex-direction:column;">
+        <div class="s-img"><img src="assets/img/climbing.jpg" alt="Module ｜ 深化實踐"></div>
+        <div class="s-body" style="display:flex;flex-direction:column;flex:1;">
+          <span class="mc-stage" style="font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-500);">Module 2 · Breakthrough</span>
+          <h3 style="font-size:20px;margin:8px 0 10px;">突破格局工作坊</h3>
+          <p class="muted" style="font-size:14px;margin:0 0 16px;">（課程說明待補充）</p>
+          <button class="s-toggle" aria-expanded="false"><span class="s-label">顯示更多</span> <span class="s-arrow">▾</span></button>
+          <dl class="s-detail" style="flex:1;">
+            <div class="s-row"><dt>課程模組</dt><dd>Module 2 突破格局</dd></div>
+            <div class="s-row"><dt>課程長度</dt><dd>即將公布</dd></div>
+            <div class="s-row"><dt>形式</dt><dd>實體</dd></div>
+            <div class="s-row"><dt>梯次日期</dt><dd>即將公布</dd></div>
+            <div class="s-row"><dt>課程費用</dt><dd>請洽詢顧問</dd></div>
+          </dl>
+          <a class="btn btn-ghost" href="#" style="margin-top:20px;width:100%;justify-content:center;">查看完整課程 <span class="arr">→</span></a>
+        </div>
+      </div>
+
+      <!-- card3 -->
+
+      <div class="summary" style="position:static;display:flex;flex-direction:column;">
+        <div class="s-img"><img src="assets/img/silhouettes.jpg" alt="Module 3 ｜ 實踐影響"></div>
+        <div class="s-body" style="display:flex;flex-direction:column;flex:1;">
+          <span class="mc-stage" style="font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-500);">Module 3 · Actualization</span>
+          <h3 style="font-size:20px;margin:8px 0 10px;">實踐影響工作坊</h3>
+          <p class="muted" style="font-size:14px;margin:0 0 16px;">（課程說明待補充）</p>
+          <button class="s-toggle" aria-expanded="false"><span class="s-label">顯示更多</span> <span class="s-arrow">▾</span></button>
+          <dl class="s-detail" style="flex:1;">
+            <div class="s-row"><dt>課程模組</dt><dd>Module 3 實踐影響工作坊</dd></div>
+            <div class="s-row"><dt>課程長度</dt><dd>即將公布</dd></div>
+            <div class="s-row"><dt>形式</dt><dd>實體</dd></div>
+            <div class="s-row"><dt>梯次日期</dt><dd>即將公布</dd></div>
+            <div class="s-row"><dt>課程費用</dt><dd>請洽詢顧問</dd></div>
+          </dl>
+          <a class="btn btn-ghost" href="#" style="margin-top:20px;width:100%;justify-content:center;">查看完整課程 <span class="arr">→</span></a>
+        </div>
+      </div>
+
+      <!-- card4 -->
+
+      <div class="summary" style="position:static;display:flex;flex-direction:column;">
+        <div class="s-img"><img src="assets/img/Abundance&prosperity.jpg" alt="豐盛富足工作坊"></div>
+        <div class="s-body" style="display:flex;flex-direction:column;flex:1;">
+          <span class="mc-stage" style="font-family:var(--serif);font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-500);">全人發展系列</span>
+          <h3 style="font-size:20px;margin:8px 0 10px;">豐盛富足工作坊</h3>
+          <p class="muted" style="font-size:14px;margin:0 0 16px;">從體驗式活動與遊戲中，重新看見自己與生命、關係、時間、健康與未來之間的真正關係。</p>
+          <button class="s-toggle" aria-expanded="false"><span class="s-label">顯示更多</span> <span class="s-arrow">▾</span></button>
+          <dl class="s-detail" style="flex:1;">
+            <div class="s-row"><dt>課程類型</dt><dd>全人發展系列</dd></div>
+            <div class="s-row"><dt>課程長度</dt><dd>週末兩天</dd></div>
+            <div class="s-row"><dt>形式</dt><dd>實體</dd></div>
+            <div class="s-row"><dt>梯次日期</dt><dd>2026.07.11–12</dd></div>
+            <div class="s-row"><dt>課程費用</dt><dd>請洽詢顧問</dd></div>
+          </dl>
+          <a class="btn btn-ghost" href="abundance&prosperity.html" style="margin-top:20px;width:100%;justify-content:center;">查看完整課程 <span class="arr">→</span></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" data-screen-label="頁尾">
+  <div class="wrap">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="assets/img/white_vertical.png" alt="統域領導力發展">
+        <p class="manifesto-line">BE the change · Lead the way · Make impact</p>
+      </div>
+      <div class="footer-col">
+        <h5>網站導覽</h5>
+        <ul>
+          <li><a href="index.html">首頁</a></li>
+          <li><a href="workshop.html">卓越領導工作坊</a></li>
+          <li><a href="m1.html">M1 覺察探索</a></li>
+          <li><a href="register.html">工作坊報名</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>聯絡我們</h5>
+        <ul>
+          <li>台北訓練中心 台北市內湖區成功路5段460號6樓 <!--<span class="placeholder-tag"></span></li>-->
+          <li><a href="mailto:service@bedo-have.com">service@bedo-have.com</a> <!--<span class="placeholder-tag"></span></li>-->
+          <li>+886 2 2657-5738 <!--<span class="placeholder-tag"></span></li>-->
+          <li style="margin-top:6px;">Facebook · Instagram · LINE <span class="placeholder-tag">待補</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 統域領導力發展 BE DO HAVE LEADERSHIP．版權所有</span>
+      <span class="tagline">Be · Do · Have</span>
+    </div>
+  </div>
+</footer>
+<style>
+.reg-hero{position:relative;color:#fff;overflow:hidden;display:flex;align-items:flex-end;min-height:46vh;}
+.reg-hero .hero-bg{position:absolute;inset:0;}
+.reg-hero .hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center 35%;}
+.reg-hero .hero-bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.24) 0%,rgba(0,0,0,.30) 40%,rgba(0,0,0,.34) 100%);}
+.reg-hero .rh-inner{position:relative;z-index:2;width:100%;max-width:var(--wrap);margin-inline:auto;
+  padding:0 var(--gutter) clamp(40px,5vw,60px);}
+.reg-hero .module-tag{font-family:var(--serif);font-size:15px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue-400);}
+.reg-hero h1{font-size:clamp(34px,5vw,60px);color:#fff;margin-top:12px;}
+.reg-hero p{max-width:560px;margin-top:14px;color:rgba(255,255,255,.9);}
+.step-card{padding-top:24px;border-top:2px solid var(--indigo);}
+.step-card .step-n{font-family:var(--serif);font-size:15px;letter-spacing:.16em;color:var(--blue-500);}
+.step-card h4{font-size:19px;margin:8px 0 8px;}
+.step-card p{margin:0;font-size:15px;color:var(--ink-soft);}
+@media (max-width:860px){.reg-hero{min-height:38vh;}}
+.summary .s-detail{display:none;margin-top:0;}
+.summary .s-detail.open{display:grid;}
+.s-toggle{display:flex;align-items:center;justify-content:space-between;width:100%;
+  background:none;border:0;border-top:1px solid var(--line-soft);padding:11px 0;
+  cursor:pointer;font-family:var(--sans);font-size:13.5px;font-weight:500;color:var(--indigo);}
+.s-toggle:hover{color:var(--blue-700,#003080);}
+.s-arrow{font-size:10px;transition:transform .22s;}
+.s-toggle[aria-expanded="true"] .s-arrow{transform:rotate(180deg);}
+</style>
+<script src="assets/site.js"></script>
+<script>
+document.querySelectorAll('.s-toggle').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var isOpen = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', isOpen ? 'false' : 'true');
+    this.nextElementSibling.classList.toggle('open', !isOpen);
+    this.querySelector('.s-label').textContent = isOpen ? '顯示更多' : '收起';
+  });
+});
+</script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+(function(){
+  emailjs.init('ilfx_GKG4h2g6M7nR');
+
+  var form = document.getElementById('regForm');
+  var err = document.getElementById('formError');
+  var success = document.getElementById('successBox');
+  var submitBtn = form.querySelector('button[type="submit"]');
+
+  var requiredIds = ['name', 'phone', 'email'];
+  requiredIds.forEach(function(id){
+    document.getElementById(id).addEventListener('input', function(){
+      this.classList.remove('invalid');
+      if(!form.querySelector('.invalid')) err.style.display = 'none';
+    });
+  });
+  document.getElementById('agree').addEventListener('change', function(){
+    this.closest('.check').classList.remove('invalid');
+    if(!form.querySelector('.invalid')) err.style.display = 'none';
+  });
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    var nameEl  = document.getElementById('name');
+    var phoneEl = document.getElementById('phone');
+    var emailEl = document.getElementById('email');
+    var agreeEl = document.getElementById('agree');
+
+    var name  = nameEl.value.trim();
+    var phone = phoneEl.value.trim();
+    var email = emailEl.value.trim();
+    var session    = document.getElementById('session').value;
+    var source     = document.getElementById('source').value;
+    var motivation = document.getElementById('motivation').value.trim();
+    var agree  = agreeEl.checked;
+    var emailOk = /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email);
+
+    // Reset invalid states
+    [nameEl, phoneEl, emailEl].forEach(function(el){ el.classList.remove('invalid'); });
+    agreeEl.closest('.check').classList.remove('invalid');
+
+    if(!name || !phone || !emailOk){
+      if(!name)    nameEl.classList.add('invalid');
+      if(!phone)   phoneEl.classList.add('invalid');
+      if(!emailOk) emailEl.classList.add('invalid');
+      err.textContent = '請完成必填欄位';
+      err.style.display = 'block';
+      (form.querySelector('input.invalid') || nameEl).focus();
+      return;
+    }
+
+    if(!agree){
+      agreeEl.closest('.check').classList.add('invalid');
+      err.textContent = '請確認核選方塊';
+      err.style.display = 'block';
+      agreeEl.focus();
+      return;
+    }
+
+    err.style.display = 'none';
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '傳送中… <span class="arr">→</span>';
+
+    var params = {
+      name: name,
+      phone: phone,
+      email: email,
+      session: session || '尚未決定／請顧問建議',
+      source: source || '（未選擇）',
+      motivation: motivation || '（未填寫）'
+    };
+
+    Promise.all([
+      emailjs.send('service_BDH', 'template_1kubbkh', params),
+      emailjs.send('service_BDH', 'template_zjbpx31', params)
+    ]).then(function(){
+      form.style.display = 'none';
+      success.classList.add('show');
+      window.scrollTo({top: Math.max(0, success.getBoundingClientRect().top + window.scrollY - 120), behavior:'smooth'});
+    }).catch(function(){
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '送出報名 <span class="arr">→</span>';
+      err.textContent = '送出失敗，請稍後再試或直接聯繫 marketing@bedo-have.com';
+      err.style.display = 'block';
+    });
+  });
+})();
+</script>
+</body>
+</html>
