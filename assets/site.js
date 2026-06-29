@@ -1,27 +1,5 @@
-/* 統域領導力發展 — shared site behaviour */
+/* 統域領導力發展 — shared site behaviour (CSP-safe, external) */
 (function(){
-  // Scroll position save / restore for back-navigation
-  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
-
-  // Save position when leaving via any same-origin link
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('a[href]');
-    if (link && !link.target && link.origin === location.origin &&
-        link.pathname !== location.pathname) {
-      sessionStorage.setItem('bdh:scrollY:' + location.pathname, String(window.scrollY));
-    }
-  }, true);
-
-  // Restore position on back / forward navigation
-  var navEntry = performance && performance.getEntriesByType &&
-    performance.getEntriesByType('navigation')[0];
-  if (navEntry && navEntry.type === 'back_forward') {
-    var saved = sessionStorage.getItem('bdh:scrollY:' + location.pathname);
-    if (saved !== null) {
-      window.scrollTo(0, parseInt(saved, 10));
-    }
-  }
-
   // Header scroll state. If page has a hero, header starts transparent (.on-hero)
   var header = document.querySelector('.site-header');
   var hasHero = document.body.hasAttribute('data-hero');
@@ -40,7 +18,7 @@
   window.addEventListener('scroll', onScroll, {passive:true});
   onScroll();
 
-  // Mobile nav
+  // Mobile nav drawer
   var toggle = document.querySelector('.menu-toggle');
   var drawer = document.querySelector('.mobile-nav');
   function closeDrawer(){ if(drawer){drawer.classList.remove('open'); document.body.style.overflow='';} }
@@ -50,13 +28,15 @@
     drawer.querySelectorAll('a').forEach(function(a){ a.addEventListener('click', closeDrawer); });
   }
 
-  // Mobile accordion
+  // Mobile accordion (submenu) toggles
   document.querySelectorAll('.m-accordion-toggle').forEach(function(btn){
     btn.addEventListener('click', function(){
-      var expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', !expanded);
-      var body = btn.nextElementSibling;
-      if(body) body.classList.toggle('open', !expanded);
+      var open = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', open ? 'false' : 'true');
+      var body = this.nextElementSibling;
+      if(body && body.classList.contains('m-accordion-body')){
+        body.classList.toggle('open', !open);
+      }
     });
   });
 
