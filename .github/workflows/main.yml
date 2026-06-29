@@ -1,0 +1,19 @@
+name: Continue Integration
+
+on:
+  push:
+    branches: [ main ]  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: (main) git pull - bdhwebsite2026
+      if: github.ref == 'refs/heads/main'
+      uses: appleboy/ssh-action@v1.0.3
+      with:
+        host: ${{ secrets.SSH_SERVER }}
+        username: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: ${{ secrets.SSH_PORT }}
+        script: "cd /var/www/bdhwebsite2026 && git fetch && git pull"
