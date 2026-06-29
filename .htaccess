@@ -1,0 +1,5 @@
+<IfModule mod_headers.c>
+Header always unset X-Frame-Options
+Header always set X-Frame-Options "SAMEORIGIN"
+Header set Content-Security-Policy "default-src * 'unsafe-inline' 'unsafe-eval' 'self' data: blob:; script-src * 'unsafe-inline' 'unsafe-eval' 'self' data: blob:; img-src * 'unsafe-inline' 'unsafe-eval' 'self' data: blob:; style-src * 'unsafe-inline' 'unsafe-eval' 'self' data: blob:; font-src * 'unsafe-inline' 'unsafe-eval' 'self' data: blob:;"
+</IfModule>
