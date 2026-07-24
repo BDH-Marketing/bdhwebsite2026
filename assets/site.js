@@ -49,8 +49,9 @@
     var lbCloseBtn = lightbox.querySelector('.lightbox-close');
     var lastFocused = null;
     var openLightbox = function(trigger){
-      lbImg.src = trigger.getAttribute('data-lightbox-src') || '';
-      lbImg.alt = trigger.getAttribute('data-lightbox-alt') || '';
+      var srcImg = trigger.querySelector('img');
+      lbImg.src = srcImg ? srcImg.src : '';
+      lbImg.alt = srcImg ? srcImg.alt : '';
       lbTitle.textContent = trigger.getAttribute('data-lightbox-title') || '';
       lbCaption.textContent = trigger.getAttribute('data-lightbox-caption') || '';
       lastFocused = document.activeElement;
@@ -64,7 +65,7 @@
       document.body.style.overflow = '';
       if(lastFocused && lastFocused.focus) lastFocused.focus();
     };
-    document.querySelectorAll('[data-lightbox-src]').forEach(function(trigger){
+    document.querySelectorAll('.mc-img-btn').forEach(function(trigger){
       trigger.addEventListener('click', function(){ openLightbox(trigger); });
     });
     lightbox.querySelectorAll('[data-lightbox-close]').forEach(function(el){
