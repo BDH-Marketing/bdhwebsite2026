@@ -40,6 +40,41 @@
     });
   });
 
+  // Latest-news photo lightbox
+  var lightbox = document.getElementById('newsLightbox');
+  if(lightbox){
+    var lbImg = document.getElementById('lightboxImg');
+    var lbTitle = document.getElementById('lightboxTitle');
+    var lbCaption = document.getElementById('lightboxCaption');
+    var lbCloseBtn = lightbox.querySelector('.lightbox-close');
+    var lastFocused = null;
+    var openLightbox = function(trigger){
+      lbImg.src = trigger.getAttribute('data-lightbox-src') || '';
+      lbImg.alt = trigger.getAttribute('data-lightbox-alt') || '';
+      lbTitle.textContent = trigger.getAttribute('data-lightbox-title') || '';
+      lbCaption.textContent = trigger.getAttribute('data-lightbox-caption') || '';
+      lastFocused = document.activeElement;
+      lightbox.hidden = false;
+      document.body.style.overflow = 'hidden';
+      lbCloseBtn.focus();
+    };
+    var closeLightbox = function(){
+      lightbox.hidden = true;
+      lbImg.src = '';
+      document.body.style.overflow = '';
+      if(lastFocused && lastFocused.focus) lastFocused.focus();
+    };
+    document.querySelectorAll('[data-lightbox-src]').forEach(function(trigger){
+      trigger.addEventListener('click', function(){ openLightbox(trigger); });
+    });
+    lightbox.querySelectorAll('[data-lightbox-close]').forEach(function(el){
+      el.addEventListener('click', closeLightbox);
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && !lightbox.hidden) closeLightbox();
+    });
+  }
+
   // Scroll reveal
   var els = document.querySelectorAll('.reveal');
   if('IntersectionObserver' in window){
