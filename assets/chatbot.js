@@ -89,7 +89,7 @@
       '</button>' +
       '<div class="bdh-chat-panel" role="dialog" aria-label="統域小助手對話視窗">' +
         '<div class="bdh-chat-head">' +
-          '<img src="assets/img/logo-vertical-white.png" alt="" class="bdh-chat-mark">' +
+          '<img src="assets/img/white_vertical.png" alt="" class="bdh-chat-mark">' +
           '<div><span class="bdh-chat-title">統域小助手</span><span class="bdh-chat-sub">工作時間內將由顧問跟進</span></div>' +
         '</div>' +
         '<div class="bdh-chat-body" id="bdhChatBody"></div>' +
