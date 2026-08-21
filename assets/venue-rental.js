@@ -5,6 +5,40 @@
 (function () {
   'use strict';
 
+  /* ---------- 密碼保護（頁面尚未公開，僅為前台軟性門檻，非真正的安全機制） ---------- */
+  var GATE_PASSWORD = 'bdh2026';
+  var GATE_STORAGE_KEY = 'bdh_venue_gate_unlocked';
+  function initGate() {
+    var gate = document.getElementById('venueGate');
+    var form = document.getElementById('venueGateForm');
+    var pwd = document.getElementById('venueGatePwd');
+    var err = document.getElementById('venueGateError');
+    if (!gate || !form || !pwd) return;
+
+    var alreadyUnlocked = false;
+    try { alreadyUnlocked = sessionStorage.getItem(GATE_STORAGE_KEY) === '1'; } catch (e) {}
+    if (alreadyUnlocked) { gate.hidden = true; return; }
+
+    document.body.style.overflow = 'hidden';
+    pwd.focus();
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (pwd.value === GATE_PASSWORD) {
+        try { sessionStorage.setItem(GATE_STORAGE_KEY, '1'); } catch (e) {}
+        gate.hidden = true;
+        document.body.style.overflow = '';
+      } else {
+        err.hidden = false;
+        pwd.value = '';
+        pwd.focus();
+        gate.classList.remove('is-shake');
+        void gate.offsetWidth;
+        gate.classList.add('is-shake');
+      }
+    });
+  }
+
   /* ---------- 照片佔位：載入失敗時顯示虛線佔位框 ---------- */
   function markPhotos() {
     document.querySelectorAll('.photo').forEach(function (box) {
@@ -132,6 +166,7 @@
   }
 
   function init() {
+    initGate();
     markPhotos();
     initShowcase();
     initTabGroup('room');
