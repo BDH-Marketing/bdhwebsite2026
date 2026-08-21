@@ -1,0 +1,84 @@
+/* ============================================================
+   be do have — design tokens (subset used by the venue page)
+   Source: BDH DESIGN SYSTEM
+   ============================================================ */
+
+/* Noto Sans TC / Noto Serif TC are already loaded site-wide by assets/site.css */
+
+:root {
+  /* Brand blues */
+  --blue-be: #0C408D;
+  --blue-do: #186AB2;
+  --blue-have: #398BC1;
+  --blue-accent: #5C93C5;
+
+  --blue-950: #07254F;
+  --blue-200: #BFD7EC;
+  --blue-100: #E1EDF7;
+  --blue-50: #F1F6FB;
+
+  /* Neutrals */
+  --ink-900: #1C1F26;
+  --ink-700: #474545;
+  --ink-500: #6B6A6A;
+  --ink-400: #9A9999;
+  --ink-300: #C7C6C6;
+  --ink-200: #E2E1E0;
+  --ink-100: #EFEEED;
+  --ink-50: #F7F6F4;
+  --white: #FFFFFF;
+
+  /* Status */
+  --success: #2E8B6F;
+  --warning: #C98A1E;
+  --danger: #C0473C;
+
+  /* Aliases */
+  --brand-gradient: linear-gradient(95deg, var(--blue-be) 0%, var(--blue-do) 48%, var(--blue-have) 100%);
+  --text-primary: var(--ink-900);
+  --text-muted: var(--ink-500);
+  --surface-card: var(--white);
+  --border-subtle: var(--ink-200);
+  --border-strong: var(--ink-300);
+
+  /* Type */
+  --font-sans: "Noto Sans TC", -apple-system, BlinkMacSystemFont, "PingFang TC", "Microsoft JhengHei", "Segoe UI", sans-serif;
+  --font-serif: "Noto Serif TC", "Songti TC", Georgia, "Times New Roman", serif;
+
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --text-2xs: 11px;
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 20px;
+  --text-xl: 25px;
+  --text-2xl: 31px;
+  --text-3xl: 39px;
+  --text-4xl: 49px;
+
+  --tracking-tight: -0.02em;
+  --tracking-caps: 0.12em;
+
+  /* Shape */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+
+  /* Depth — blue-tinted, never gray mush */
+  --shadow-sm: 0 1px 3px rgba(12, 64, 141, .07), 0 1px 2px rgba(12, 64, 141, .04);
+  --shadow-md: 0 6px 18px rgba(12, 64, 141, .10), 0 2px 6px rgba(12, 64, 141, .06);
+  --shadow-xl: 0 24px 60px rgba(12, 64, 141, .16), 0 6px 18px rgba(12, 64, 141, .08);
+  --shadow-brand: 0 8px 24px rgba(12, 64, 141, .28);
+
+  /* Motion */
+  --ease-out: cubic-bezier(.22, 1, .36, 1);
+  --ease-standard: cubic-bezier(.4, 0, .2, 1);
+  --dur-fast: 140ms;
+  --dur-mid: 240ms;
+  --dur-slow: 320ms;
+}
