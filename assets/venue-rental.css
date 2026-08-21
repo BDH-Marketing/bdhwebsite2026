@@ -128,8 +128,11 @@
 }
 #venue-page .section { padding: 88px 0 0; }
 
-/* ---------- buttons ---------- */
-#venue-page .btn {
+/* ---------- buttons ----------
+   .btn-light / .btn-outline-light are site.css's own hero-CTA classes (used on
+   index.html / workshop.html heroes) — excluded here so they render exactly
+   like the rest of the site instead of the venue page's own button system. */
+#venue-page .btn:not(.btn-light):not(.btn-outline-light) {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -149,8 +152,8 @@
               border-color var(--dur-fast) var(--ease-standard),
               transform var(--dur-fast) var(--ease-standard);
 }
-#venue-page .btn:hover { transform: translateY(-1px); }
-#venue-page .btn:active { transform: translateY(0); }
+#venue-page .btn:not(.btn-light):not(.btn-outline-light):hover { transform: translateY(-1px); }
+#venue-page .btn:not(.btn-light):not(.btn-outline-light):active { transform: translateY(0); }
 #venue-page .btn--lg { height: 54px; padding: 0 30px; font-size: var(--text-md); }
 #venue-page .btn--block { width: 100%; }
 #venue-page .btn--primary { background: var(--blue-be); color: var(--white); box-shadow: var(--shadow-sm); }
